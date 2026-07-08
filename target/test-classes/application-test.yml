@@ -1,0 +1,29 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          # jwk-set-uri (a diferencia de issuer-uri) NO se resuelve por red al
+          # levantar el contexto, solo al validar un token real. Sirve para
+          # que el test de contexto no dependa de que Azure este accesible.
+          jwk-set-uri: https://example.com/.well-known/jwks.json
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: sa
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.H2Dialect
+
+azure:
+  b2c:
+    role-claim-name: extension_test_Role
+
+aws:
+  s3:
+    access-key: test
+    secret-key: test
+    region: us-east-1
+    bucket-name: test-bucket

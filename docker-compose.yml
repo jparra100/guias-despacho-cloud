@@ -1,0 +1,62 @@
+version: "3.8"
+
+services:
+  mysql-db:
+    image: mysql:8.0
+    container_name: guias-despacho-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: guiasdb
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports: 
+     - "5672:5672"
+     - "15672:15672"
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: guias-despacho-app
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      DB_HOST: mysql-db
+      DB_PORT: 3306
+      DB_NAME: guiasdb
+      DB_USER: root
+      DB_PASSWORD: root
+      
+      AZURE_B2C_ISSUER_URI: https://duoccazure.b2clogin.com/68889877-6ff0-4a80-86ec-dedafca2bae4/v2.0/
+      AZURE_B2C_JWKS_URI: https://duoccazure.b2clogin.com/duoccazure.onmicrosoft.com/B2C_1_cloud_1_native/discovery/v2.0/keys
+      AZURE_B2C_ROLE_CLAIM: extension_Role
+      
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      AWS_SESSION_TOKEN: ${AWS_SESSION_TOKEN} 
+      AWS_REGION: ${AWS_REGION}
+      AWS_S3_BUCKET: ${AWS_SESSION_BUCKET}
+      
+
+
+
+
+    depends_on:
+      mysql-db:
+        condition: service_healthy
+
+volumes:
+  mysql_data:

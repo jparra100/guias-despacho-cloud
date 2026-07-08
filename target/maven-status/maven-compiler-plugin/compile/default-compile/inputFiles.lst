@@ -1,0 +1,15 @@
+C:\Users\mcami\Downloads\Despachos\SistemaGuiasDespacho\src\main\java\com\duocuc\sistemaguiasdespacho\repository\GuiaDespachoRepository.java
+C:\Users\mcami\Downloads\Despachos\SistemaGuiasDespacho\src\main\java\com\duocuc\sistemaguiasdespacho\controller\GuiaDespachoController.java
+C:\Users\mcami\Downloads\Despachos\SistemaGuiasDespacho\src\main\java\com\duocuc\sistemaguiasdespacho\config\S3Config.java
+C:\Users\mcami\Downloads\Despachos\SistemaGuiasDespacho\src\main\java\com\duocuc\sistemaguiasdespacho\dto\GuiaDespachoResponse.java
+C:\Users\mcami\Downloads\Despachos\SistemaGuiasDespacho\src\main\java\com\duocuc\sistemaguiasdespacho\entity\GuiaDespacho.java
+C:\Users\mcami\Downloads\Despachos\SistemaGuiasDespacho\src\main\java\com\duocuc\sistemaguiasdespacho\security\AzureB2CRoleConverter.java
+C:\Users\mcami\Downloads\Despachos\SistemaGuiasDespacho\src\main\java\com\duocuc\sistemaguiasdespacho\config\SecurityConfig.java
+C:\Users\mcami\Downloads\Despachos\SistemaGuiasDespacho\src\main\java\com\duocuc\sistemaguiasdespacho\exception\RecursoNoEncontradoException.java
+C:\Users\mcami\Downloads\Despachos\SistemaGuiasDespacho\src\main\java\com\duocuc\sistemaguiasdespacho\SistemaGuiasDespachoApplication.java
+C:\Users\mcami\Downloads\Despachos\SistemaGuiasDespacho\src\main\java\com\duocuc\sistemaguiasdespacho\service\GuiaDespachoService.java
+C:\Users\mcami\Downloads\Despachos\SistemaGuiasDespacho\src\main\java\com\duocuc\sistemaguiasdespacho\dto\GuiaDespachoRequest.java
+C:\Users\mcami\Downloads\Despachos\SistemaGuiasDespacho\src\main\java\com\duocuc\sistemaguiasdespacho\controller\PublicController.java
+C:\Users\mcami\Downloads\Despachos\SistemaGuiasDespacho\src\main\java\com\duocuc\sistemaguiasdespacho\service\PdfGeneratorService.java
+C:\Users\mcami\Downloads\Despachos\SistemaGuiasDespacho\src\main\java\com\duocuc\sistemaguiasdespacho\service\S3StorageService.java
+C:\Users\mcami\Downloads\Despachos\SistemaGuiasDespacho\src\main\java\com\duocuc\sistemaguiasdespacho\exception\GlobalExceptionHandler.java
