@@ -44,7 +44,7 @@ public class PdfGeneratorService {
                 </style>
                 </head>
                 <body>
-                    <h1>Guia de Despacho N&deg; %s</h1>
+                    <h1>Guia de Despacho N°; %s</h1>
                     <table>
                         <tr><td class="label">Transportista</td><td>%s</td></tr>
                         <tr><td class="label">Fecha de despacho</td><td>%s</td></tr>
